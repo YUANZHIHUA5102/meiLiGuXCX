@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的小背篓",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  }
+}

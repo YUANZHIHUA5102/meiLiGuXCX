@@ -1,0 +1,236 @@
+/* pages/logs/logs.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  background: url("https://mlg.proya.com:8099/image/exchange/1.jpg");
+  background-size: 100% 100%;
+  flex-direction: column;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 95%;
+  margin-left: 0.5%;
+}
+
+.noXmenu {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 72%;
+  margin-left: 0.5%;
+}
+
+/*使屏幕变暗  */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+/*对话框 */
+
+.commodity_attr_box {
+  width: 94%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding: 20rpx 3%;
+}
+
+.commImg {
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border: 1px solid #f5f5f5;
+  z-index: 12;
+  left: 20px;
+  top: -35px;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+
+.commImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sku-price {
+  color: red;
+  position: relative;
+  left: 250rpx;
+  margin: 1rpx;
+}
+
+.sku-title {
+  position: relative;
+  left: 250rpx;
+  font-size: 12px;
+  margin: 1rpx;
+}
+
+.line {
+  width: 95%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 30rpx 0rpx 5rpx 0rpx;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.gg-title {
+  font-size: 15px;
+}
+
+.gg text {
+  width: auto;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  background: #f2f2f2;
+  text-align: center;
+  margin: 20rpx 0 0 26rpx;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.gg .active {
+  color: #fff;
+  background: #e64340;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row .quantity-position {
+  position: absolute;
+  margin-top: 5px;
+  right: 50rpx;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-add {
+  width: 50%;
+  border: 0px;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.button-buy {
+  width: 50%;
+  background: #f44336;
+  color: #fff;
+  border-radius: 0px;
+}
+
+/*数量加减样式*/
+
+/*主容器*/
+
+.stepper {
+  width: 80px;
+  height: 26px;
+  /*给主容器设一个边框*/
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 19px;
+  line-height: 26px;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  padding: 0px;
+  width: 40px;
+  height: 26px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+.goods-title {
+  font-size: 26rpx;
+  color: #000;
+  font-weight: 500;
+  margin-top: 75rpx;
+  margin-left: 10rpx;
+}
+
+.goods_img {
+  height: 242rpx;
+  width: 200rpx;
+  border-radius: 10%;
+}
+
+.goods-detail {
+  background: url("https://mlg.proya.com:8099/image/home/shadowa.png") no-repeat;
+  height: 250rpx;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-price {
+  color: rgb(248, 135, 7);
+  height: 50%;
+  margin-left: 10rpx;
+  margin-top: 48%;
+  font-weight: 500;
+}
+
+.ccc {
+  background: url(https://mlg.proya.com:8099/image/home/psb.png);
+  height: 258rpx;
+  width: 206rpx;
+  background-size: 100% 100%;
+  margin: auto;
+  margin-top: 2%;
+}

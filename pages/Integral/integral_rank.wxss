@@ -1,0 +1,54 @@
+/* pages/map.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  overflow: auto;
+  background: url("https://mlg.proya.com:8099/image/rank/rank.jpg");
+}
+
+.List {
+  width: 95%;
+  margin-top: 5%;
+  background: url("https://mlg.proya.com:8099/image/rank/1.png");
+  background-size: 100% 100%;
+  height: 56.5%;
+}
+
+.good-img {
+  width: 230rpx;
+  height: 110rpx;
+  margin: 0rpx 0rpx 20rpx 20rpx;
+  display: flex;
+  border-radius: 10%;
+  background-color: rgb(230, 224, 224);
+}
+
+.menu {
+  top: 50rpx;
+  height: 85%;
+  bottom: 150rpx;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.rank-info {
+  height: 120rpx;
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://mlg.proya.com:8099/image/rank/2.png");
+  background-size: 100% 100%;
+  left: -18rpx;
+  top: -3rpx;
+  position: relative;
+  margin: 0rpx 20rpx 20rpx 0rpx;
+}

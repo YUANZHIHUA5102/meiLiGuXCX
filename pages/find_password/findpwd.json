@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "找回密码",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  }
+}

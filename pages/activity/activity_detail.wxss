@@ -1,0 +1,45 @@
+/* pages/activity/activity_detail.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.sign {
+  background: url("https://mlg.proya.com:8099/image/activity_detail/2.png");
+  background-size: 100% 100%;
+}
+
+.nosign {
+  background: url("https://mlg.proya.com:8099/image/activity_detail/1.png");
+  background-size: 100% 100%;
+}
+
+.remind {
+  background: linear-gradient(#ac95fd, #eb6fd3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+}
+
+.remind_text {
+  color: #fff;
+  font-size: 50rpx;
+  font-weight: 500;
+}
+
+.overdue {
+  width: 100%;
+  z-index: -1;
+  margin-top: 50px;
+}
+
+.no_overdue {
+  width: 100%;
+  z-index: -1;
+}

@@ -1,0 +1,27 @@
+<!--pages/logs/login.wxml-->
+<view class="container">
+
+  <view class="input-from">
+    <view class="item">
+      <image class='icon' style='width:40rpx;' src='../image/f_account.png'> </image>
+      <input placeholder-class="remind" class="input-text" maxlength='11' type="number" placeholder='手机号码' bindinput="phoneInput">
+      </input>
+    </view>
+    <view class="line"></view>
+    <view class="item">
+      <image class='icon' style='height: 41rpx;' src='../image/f_code.png'> </image>
+      <input placeholder-class="remind" class="input-text" style='width:56%' maxlength='6' type="number" placeholder='验证码' bindinput="confirmcodeInput">
+      </input>
+      <image bindtap='sendcode' style='width:23%;height:55rpx;' src='../image/f_sendcode.png'> </image>
+    </view>
+    <view class="line"></view>
+    <view class="item">
+      <image class='icon' style='width:40rpx;height:36rpx;margin-left:5.5%;' src='../image/f-password.png'> </image>
+      <input style='margin-left:6.5%;' placeholder-class="remind" value='{{password}}' class="input-text" maxlength='11' type="text" placeholder='请输入新密码(6-11位)' bindinput="passwordInput">
+      </input>
+    </view>
+  </view>
+  <image bindtap='confirm' style='margin-top:10%;margin-left:10%;width:80%;height:5%;' src='../image/reset.png'></image>
+
+  <toast id="toast" />
+</view>

@@ -1,0 +1,28 @@
+<!--pages/logs/login.wxml-->
+<view class="container">
+  <view class="login_form">
+    <view class="item">
+      <image class="icon" src='../image/account.png'></image>
+      <input cursor-spacing='100' placeholder-class="remind" class="input-text" type="number" maxlength='11' placeholder='请输入您的手机号' bindinput="phoneInput">
+      </input>
+    </view>
+    <view style='margin-top:4%;'></view>
+    <view class="item">
+      <image class="icon" src='../image/password.png'></image>
+      <input cursor-spacing='100' placeholder-class="remind" class="input-text" maxlength='11' type="text" password="ture " placeholder='请输入您的密码' bindinput="passwordInput">
+      </input>
+    </view>
+    <image bindtap='login' class="login_but" src='../image/bgp/sign_icon.png'></image>
+    <view style='margin-top:4%;'></view>
+    <view style='display:flex;flex-direction: row;justify-content: center;height:20px;'>
+      <text style='margin-right:3%;color:#fff;' bindtap='findpassword'>找回密码</text>
+      <text style='color:#fff;'>|</text>
+      <text style='margin-left:3%;color:#fff;' bindtap='register'>立即注册</text>
+    </view>
+  </view>
+  <view class="bottom-form" bindtap='wxlogin'>
+    <text class="wx_login" style='color:#fff;'>其他登录方式:</text>
+    <image class="wx_logo" style='position:flex;margin-top:15rpx;' src='../image/bgp/wx_logo.png'></image>
+  </view>
+  <toast id="toast" />
+</view>

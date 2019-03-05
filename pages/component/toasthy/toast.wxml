@@ -1,0 +1,9 @@
+<!--components/toast/toast.wxml-->
+<view class="toast-warpper" bindtap='hideToast' catchtouchstart='preventTouchMove' catchtouchmove="preventTouchMove" hidden='{{!show}}'>
+  <view class="toast">
+    <image wx:if="{{toastType=='loading'}}" class="toast-image" src="./loading.gif"></image>
+    <image wx:if="{{toastType=='error'}}" class="toast-image" src="./error@{{pixelRatio}}x.png"></image>
+    <image wx:if="{{toastType=='info'}}" class="toast-image2" src="./info@{{pixelRatio}}x.png"></image>
+    <view class="toast-title">{{message}}</view>
+  </view>
+</view>

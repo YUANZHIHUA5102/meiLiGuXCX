@@ -1,0 +1,192 @@
+.container {
+  height: 100%;
+  display: flex;
+  background: url("https://mlg.proya.com:8099/image/cart/cart.jpg");
+  background-size: 100% 100%;
+  flex-direction: column;
+}
+
+.cart-box .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx;
+  background: url("https://mlg.proya.com:8099/image/cart/1.png");
+  background-size: 100% 100%;
+  height: 22%;
+}
+
+.cart-box .item .goods-info {
+  margin-left: 20rpx;
+}
+
+.cart-box .goods-img {
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 20rpx;
+  border-radius: 10%;
+}
+
+.cart-box .row {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  width: 430rpx;
+  margin-bottom: 20rpx;
+  font-weight: 400;
+}
+
+.cart-box .goods-name {
+  font-size: 32rpx;
+  width: calc(100% - 200rpx);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-box .goods-price {
+  margin-left: 10%;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgb(228, 116, 238);
+}
+
+.cart-box .goods-type {
+  color: #999;
+  font-size: 24rpx;
+  margin-bottom: 5rpx;
+}
+
+.cart-box .num-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cart-box .goods-btn-left {
+  display: flex;
+  width: 60rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  border-radius: 10rpx 0 0 10rpx;
+  justify-content: center;
+}
+
+.cart-box .goods-btn-right {
+  display: flex;
+  width: 60rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  border-radius: 0 10rpx 10rpx 0;
+  justify-content: center;
+}
+
+.cart-box .num {
+  display: flex;
+  color: #000;
+  width: 60rpx;
+  text-align: center;
+  height: 100%;
+  font-size: 20rpx;
+  justify-content: center;
+  align-items: center;
+  border-left: 1rpx solid rgb(206, 203, 203);
+  border-right: 1rpx solid rgb(206, 203, 203);
+  font-weight: 300;
+}
+
+.cart-box .btn-add {
+  font-size: 30rpx;
+}
+
+.cart-box .btn-minus {
+  font-size: 18rpx;
+}
+
+.cart-box .btn-groups {
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid rgb(206, 203, 203);
+  border-radius: 10rpx;
+}
+
+.cart-fixbar {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  height: 100rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart-fixbar .allSelect {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  align-items: center;
+  color: #000;
+  font-size: 32rpx;
+}
+
+.cart-fixbar .allSelect-text {
+  margin-left: 20rpx;
+  font-weight: 500;
+  font-size: 28rpx;
+}
+
+.cart-fixbar .count {
+  margin-left: 18%;
+  color: #000;
+}
+
+.cart-fixbar .count .text {
+  color: #ad5be3;
+}
+
+.cart-fixbar .order {
+  color: #fff;
+  height: 60rpx;
+  background: url("https://mlg.proya.com:8099/image/cart/icon.png");
+  background-size: 100% 100%;
+  position: absolute;
+  right: 6%;
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 60rpx;
+}
+
+.cart-fixbar .allnum {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.sign {
+  position: absolute;
+  display: flex;
+  margin-top: -450px;
+  margin-left: 110px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign .sign-img {
+  width: 160px;
+  height: 150px;
+}
+
+.line {
+  border-top: 5px solid rgb(209, 205, 205);
+}
+
+.but-class {
+  font-size: 35rpx;
+  font-weight: 300;
+}

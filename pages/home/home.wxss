@@ -1,0 +1,170 @@
+/**index.wxss**/
+
+.container {
+  width: 100%;
+  /* height: 100%;
+  position: fixed; */
+  display: block;
+  background: url("https://mlg.proya.com:8099/image/home/home.jpg");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.userinfo {
+  /* top: 35%; */
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  width: 100%;
+  margin-top:20rpx;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 0%;
+  margin-top: 0.5%;
+  position: absolute;
+}
+
+.userinfo-avatar-shadow {
+  border-radius: 50%;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: -0.5%;
+  margin-top: 0.5%;
+  /*box-shadow:4rpx 7rpx 9rpx 2rpx #d1cedf ;*/
+  mix-blend-mode: multiply;
+}
+
+.userinfo-nickname {
+  font-family: PingFangSC-Regular;
+  font-size: 45rpx;
+  color: #000;
+  margin-top: 20rpx;
+  width: 25%;
+  margin-left: 10rpx;
+}
+
+.user_name {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 9%;
+  align-items: center;
+}
+
+.userinfo-text {
+  margin-left: 13%;
+  color: rgb(107, 98, 98);
+  font-size: 35rpx;
+  font-weight: 400;
+  width: 100%;
+}
+
+.nav-but {
+  margin-bottom: 15px;
+  width: 80rpx;
+  height: 90rpx;
+}
+
+.store {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.store-text {
+  color: rgb(107, 98, 98);
+  font-size: 20rpx;
+}
+
+.goodslist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrow {
+  width: 30rpx;
+  height: 100rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.goods-img {
+  height: 200rpx;
+  width: 180rpx;
+  border-radius: 10%;
+  box-shadow: 1px 2px 8px rgb(116, 84, 121);
+}
+
+.goods-shadow {
+  height: 120rpx;
+  width: 180rpx;
+  margin-top: 100rpx; /*-150px*/
+}
+
+.goods-title {
+  font-size: 20rpx;
+  color: #000;
+  font-weight: 700;
+  margin-top: 75rpx;
+  margin-left: 10rpx;
+}
+
+.aaa {
+  height: 220rpx;
+  width: 180rpx;
+  border-radius: 10%;
+}
+
+.bbb {
+  background: url("https://mlg.proya.com:8099/image/home/shadowa.png") no-repeat;
+  height: 220rpx;
+  background-size: 100% 100%;
+  margin-top: 260rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-detail {
+  color: rgb(248, 135, 7);
+  height: 50%;
+  margin-left: 10rpx;
+  margin-top: 50%;
+  font-weight: 500;
+}
+
+.ccc {
+  background: url(https://mlg.proya.com:8099/image/home/psb.png);
+  height: 230rpx;
+  width: 190rpx;
+  background-size: 100% 100%;
+}
+
+.img-gu {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.sign {
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.goods_line {
+  /* position: fixed;
+  bottom: 2%; */
+  width: 100%;
+  margin-top:20rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 166px;
+}

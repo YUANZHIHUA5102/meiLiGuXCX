@@ -1,0 +1,171 @@
+/* pages/test/showinfo.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  overflow: auto;
+  background: url("https://mlg.proya.com:8099/image/userinfo/userinfo.jpg");
+  background-size: 100% 100%;
+}
+
+.item {
+  height: 90rpx;
+  display: flex;
+  border-bottom: 1rpx dashed #aaa;
+  width: 90%;
+  margin-bottom: 25rpx;
+}
+
+.left {
+  margin-top: -3rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.right {
+  margin-top: -3rpx;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 20rpx;
+  font-weight: 400;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  margin-left: 10px;
+  margin-top: -7rpx;
+}
+
+.userinfo {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  box-shadow: 4rpx 7rpx 9rpx 2rpx rgb(177, 69, 180);
+}
+
+.info {
+  position: fixed;
+  background: url("https://mlg.proya.com:8099/image/userinfo/1.png");
+  width: 94%;
+  margin-left: 3%;
+  background-size: 100% 100%;
+  display: flex;
+  top: 21%;
+  flex-direction: column;
+  height: 700rpx;
+  align-items: center;
+}
+
+.IphoneX {
+  position: fixed;
+  background: url("https://mlg.proya.com:8099/image/userinfo/1.png");
+  width: 94%;
+  margin-left: 3%;
+  background-size: 100% 100%;
+  display: flex;
+  top: 17.5%;
+  flex-direction: column;
+  height: 700rpx;
+  align-items: center;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 640rpx;
+  height: 290rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  margin-left: 52rpx;
+  margin-top: -130rpx;
+}
+
+.modal-title {
+  padding-top: 20rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 30rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.input {
+  width: 100%;
+  height: 65rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "互动活动",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  }
+}

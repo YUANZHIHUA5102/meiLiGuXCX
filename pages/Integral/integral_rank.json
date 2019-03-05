@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "谷布斯排行榜",
+    "usingComponents": {
+      "toast": "../component/toasthy/toast"
+    }
+}

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="login_form">
+    <view class="item">
+      <image class="icon" src='../image/account.png' style='margin-top:0.5%;'></image>
+      <input cursor-spacing='100' placeholder-class="remind" class="input-text" type="number" maxlength='11' placeholder='手机号码' bindinput="phoneInput">
+      </input>
+    </view>
+    <view style='margin-top:6%;'></view>
+    <view class="item">
+      <image class="icon" src='../image/code_white.png' style='margin-top:-0.5%;height:42rpx;width:34rpx;'></image>
+      <input cursor-spacing='100' placeholder-class="remind" class="input-text" style='width:52%' maxlength='6' type="number" placeholder='验证码' bindinput="confirmcodeInput">
+      </input>
+      <image src='../image/sendcode.png' bindtap='sendcode' class='sendcode'></image>
+    </view>
+    <view style='margin-top:6%;'></view>
+    <view class="item">
+      <image class="icon" src='../image/password.png' style='height:38rpx;  margin-top: 0%;'></image>
+      <input cursor-spacing='100' placeholder-class="remind" value='{{password}}' class="input-text" maxlength='11' type="text" placeholder='请输入密码(6-11位)' bindinput="passwordInput">
+      </input>
+    </view>
+    <image bindtap='register' class="login_but" src='../image/register.png'></image>
+  </view>
+  <toast id="toast" />
+</view>

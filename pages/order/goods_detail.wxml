@@ -1,0 +1,22 @@
+<!--pages/order/succ_order.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{item.imgviceurllist}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true" style='height:100%;'>
+  <view class="detail">
+    <!-- <text class="title">{{item.name}}</text>-->
+    <text class="price">{{item.cost||0}}谷粒值</text>
+  </view>
+  <!-- sku选择 -->
+  <view class="separate"></view>
+  <text style='margin-left:5%'>商品评价</text>
+  <text class="text-remark">暂无人评价哦~</text>
+  <view class="line"></view>
+  <text style='margin-left:5%'>商品详情</text>
+  <text class="goods_detail">{{item.description||"暂无商品详情"}}</text>
+
+</scroll-view>

@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/user_login/Right",
+    "pages/home/home",
+    "pages/Integral/integral_method",
+    "pages/Integral/integral_rank",
+    
+    "pages/register/register",
+    "pages/user_login/login",
+    
+    "pages/Integral/integral_exchange",
+    "pages/user_info/userinfo",
+    "pages/user_info/mine",
+    "pages/Sendmsg/sendmsg",
+    "pages/logs/logs",
+    "pages/activity/activity_list",
+    "pages/activity/activity_detail",
+    "pages/Integral/integral_details",
+    
+    "pages/order/order",
+    "pages/Integral/cart",
+    "pages/find_password/findpwd",
+    
+    
+    "pages/order/goods_detail",
+    "pages/index/index",
+    "pages/component/inputpopup/inputpopup",
+    "pages/component/toast/toast",
+    "pages/component/first_toast/toast"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#ac95fd",
+    "backgroundColor": "#f2f2f2",
+    "list": [
+      {
+        "selectedIconPath": "pages/image/home_select.png",
+        "iconPath": "pages/image/home.png",
+        "pagePath": "pages/home/home",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "pages/image/activity_select.png",
+        "iconPath": "pages/image/activity.png",
+        "pagePath": "pages/activity/activity_list",
+        "text": "互动活动"
+      },
+      {
+        "selectedIconPath": "pages/image/lanzi_select.png",
+        "iconPath": "pages/image/lanzi.png",
+        "pagePath": "pages/Integral/cart",
+        "text": "小背篓"
+      },
+      {
+        "selectedIconPath": "pages/image/userinfo_select.png",
+        "iconPath": "pages/image/userinfo.png",
+        "pagePath": "pages/user_info/mine",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

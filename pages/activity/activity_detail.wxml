@@ -1,0 +1,13 @@
+<!--pages/activity/activity_detail.wxml-->
+<view class="container">
+  <view class="remind" hidden='{{overdue}}'>
+    <text class='remind_text' decode='true'>当前报名人数:&ensp;{{ActivityNumber}}</text>
+  </view>
+  <image src='{{tempFilePaths}}' class="{{overdue?'no_overdue':'overdue'}}" style='' mode='widthFix'>
+    <movable-area style=" position:fixed;top:50px;height: 90%;;width: 100%;">
+      <movable-view hidden='{{overdue}}' animation='false' x='375px' y='50px' class="{{issign?'sign':'nosign'}}" direction="all" bindtap='ToSignUp' style="height: 35px; width: 90px;">
+      </movable-view>
+    </movable-area>
+  </image>
+  <toast id="toast" />
+</view>

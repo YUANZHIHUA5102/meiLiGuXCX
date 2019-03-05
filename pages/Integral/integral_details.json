@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "谷励值详情",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  }
+}

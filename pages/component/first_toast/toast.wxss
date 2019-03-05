@@ -1,0 +1,31 @@
+/* pages/component/toast/toast.wxss */
+
+.wx-toast-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wx-toast-content {
+  max-width: 80%;
+  height: 130rpx;
+  width: 313rpx;
+  top: -250px;
+  position: fixed;
+  padding: 150rpx;
+  background: url('https://mlg.proya.com:8099/image/toast/toast2.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.wx-toast-toast {
+  height: 100%;
+  width: 100%;
+  color: rgb(31, 22, 22);
+  font-size: 28rpx;
+  text-align: center;
+}

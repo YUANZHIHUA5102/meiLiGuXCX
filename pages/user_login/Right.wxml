@@ -1,0 +1,5 @@
+<!--pages/user_login/Right.wxml-->
+<view class="container">
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" class='but' bindgetuserinfo="bindGetUserInfo">授权登录信息</button>
+  <view wx:else>请升级微信版本</view>
+</view>

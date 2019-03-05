@@ -1,0 +1,32 @@
+/**app.wxss**/
+
+.container {
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+}
+
+page {
+  font-size: 25rpx;
+  font-weight: 200;
+}
+
+text {
+  margin-top: 2%;
+  color: #000;
+  font-size: 25rpx;
+  font-weight: 500;
+}
+
+.bgp {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-family: PingFangSC-Regular;
+  font-size: 45rpx;
+  color: #000;
+}

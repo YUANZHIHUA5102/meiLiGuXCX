@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "修炼秘籍",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  }
+}

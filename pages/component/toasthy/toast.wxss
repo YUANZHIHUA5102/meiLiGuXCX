@@ -1,0 +1,39 @@
+/* components/toast/toast.wxss */
+
+.toast-warpper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.toast-warpper .toast {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  max-width: 80%;
+  min-width: 180px;
+  padding: 19px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 9999;
+}
+
+.toast-warpper .toast .toast-image {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 18.5px;
+}
+.toast-warpper .toast .toast-image2{
+  width: 33px;
+  height: 33px;
+  margin-bottom: 12px;
+}
+.toast-warpper .toast-title {
+  font-size: 14px;
+  color: #fff;
+}

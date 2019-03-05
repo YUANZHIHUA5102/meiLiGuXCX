@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "美丽集市",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  }
+}

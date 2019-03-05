@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="userinfo">
+  
+    <block>
+    
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"> </image>
+      <image class="userinfo-avatar-shadow" src="../image/6.png"> </image>
+
+    
+      <text style='font-size:40rpx;'>{{user.userName}}</text>
+      <text style=' margin-top:2%;font-size:25rpx;color:#aaa;font-weight:400;'>{{user.depName}}-{{user.jobname}}</text>
+    </block>
+  </view>
+  <view class="menu">
+    <view class="item" style='background: url("https://mlg.proya.com:8099/image/mine/1.png");background-size: 100% 100%;' bindtap='toOrder' data-url='../order/order'>
+    </view>
+    <view class="item" style='background: url("https://mlg.proya.com:8099/image/mine/2.png");background-size: 100% 100%;' bindtap='toOrder' data-url='../order/order?currtab=0'>
+    </view>
+    <view class="item" style='background: url("https://mlg.proya.com:8099/image/mine/3.png");background-size: 100% 100%;' bindtap='toOrder' data-url='../Integral/integral_details'>
+    </view>
+  </view>
+  <view class="loginBtnView">
+    <text class="Btn" bindtap='bindViewTap'>个人中心</text>
+    <view style='margin-left:5%;width:90%;border-bottom: 1rpx dashed #aaa;'></view>
+    <text class="Btn" bindtap="exit">退出登录</text>
+  </view>
+</view>

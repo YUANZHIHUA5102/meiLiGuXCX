@@ -1,0 +1,25 @@
+<!--pages/map.wxml-->
+<view class="container" style='background-size: 100% 100%;'>
+
+  <!--分割线-->
+  <view style='display:flex;flex-direction:column;margin-top:5%;'>
+    <view style='font-weight:300;display:flex;justify-content: center;width:100%;color:#fff;font-size:60rpx;'>谷布斯排行榜</view>
+    <!--  <view style='font-weight:200;display:flex;justify-content: center;width:100%;color:#fff;font-size:20rpx;'>GRAIN VALUE RANKING</view>
+  
+      -->
+  </view>
+  <view class="List">
+    <view class="menu">
+      <view class="item" wx:for="{{rankList}}" wx:for-index="idx">
+        <image class="good-img" src="{{item.icon}}" />
+        <view class="rank-info">
+          <text style='margin-left:10%'>第{{idx+1}}名</text>
+          <text decode="{{true}}" style='margin-left:5%;width:20%'>{{item.userName}}</text>
+          <text decode="{{true}}" style='color: rgb(248, 170, 117);margin-left:10%;'>谷粒值：</text>
+          <text style='justify-content: flex-start;display:flex;width:13%;color: rgb(248, 170, 117)'>{{item.point.totalPoint}}</text>
+        </view>
+      </view>
+    </view>
+    <toast id='toast' />
+  </view>
+</view>

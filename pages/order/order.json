@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "toast": "../component/toasthy/toast"
+  },
+  "disableScroll": true
+}

@@ -1,0 +1,73 @@
+<!--pages/test/showinfo.wxml-->
+<view class="container">
+  <view class='content'>
+    <view class="userinfo">
+    
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+    
+    </view>
+    <!--白框内容-->
+    <view class="{{isIphoneX?'IphoneX':'info'}}">
+
+      <view style='margin-top:150rpx;'></view>
+      <view class='item'>
+        <image class="icon" src='../image/UserCode.png'></image>
+        <text class='left'>工号：</text>
+        <text class='right'>{{user.badge}}</text>
+      </view>
+      <view class='item'>
+        <image class="icon" src='../image/name.png'></image>
+        <text class='left'>姓名：</text>
+        <text class='right'>{{user.userName}}</text>
+      </view>
+      <view class='item'>
+        <image class="icon" src='../image/phone.png'></image>
+        <text class='left'> 手机：</text>
+        <text class='right'>{{user.mobile}}</text>
+      </view>
+      <view class='item'>
+        <image class="icon" src='../image/company.png'></image>
+        <text class='left'>部门：</text>
+        <text class='right'>{{user.depName}}</text>
+      </view>
+      <view class='item' bindtap='setemail'>
+        <image class="icon" src='../image/email.png'></image>
+        <text class='left'> 邮箱：</text>
+        <text class='right' wx:if="{{user.email==''|| user.email==null}}">未绑定</text>
+        <text class='right' wx:else>{{user.email}}></text>
+      </view>
+      <view class='item' style='border-bottom: 0px ;' bindtap='resetpwd'>
+        <image class="icon" src='../image/pwd.png'></image>
+        <text class='left'> 密码：</text>
+        <text class='right' style='color:#000 ;'>重置密码></text>
+      </view>
+      <view style='height:50px;'></view>
+
+    </view>
+
+    <!--修改邮箱密码toast------------------------------>
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}" style='border-radius: 20rpx;'>
+      <view class="modal-title">{{message}}</view>
+      <view class="modal-content">
+        <view class="modal-input" wx:if="{{reset_mail==true}}">
+          <input bindinput="inputChange" class="input" value='{{email}}' cursor-spacing='100'></input>
+        </view>
+        <view class="modal-input" wx:else="{{reset_mail==false}}">
+          <input bindinput="inputChange" class="input" value='{{password}}' maxlength='6' cursor-spacing='100'></input>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+      </view>
+    </view>
+    <!--修改邮箱密码toast------------------------------>
+  </view>
+</view>
+
+
+<view>
+  <toast id='toast'>
+  </toast>
+</view>

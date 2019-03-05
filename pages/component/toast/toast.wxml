@@ -1,0 +1,6 @@
+<!--pages/component/toast/toast.wxml-->
+<view class='wx-toast-box' hidden='{{hidden}}' bindtap="hideModal">
+  <view class='wx-toast-content' animation="{{animationData}}">
+    <view class='wx-toast-toast'>{{ content }}</view>
+  </view>
+</view>
