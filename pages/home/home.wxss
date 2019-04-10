@@ -10,21 +10,28 @@
   z-index: -1;
 }
 
+swiper {
+  height: 380rpx;
+}
+
 .userinfo {
   /* top: 35%; */
   display: flex;
   flex-direction: column;
   /* position: fixed; */
   width: 100%;
-  margin-top:20rpx;
+  margin-top: 20rpx;
+}
+
+.userinfo button {
+  float: left;
 }
 
 .userinfo-avatar {
   width: 120rpx;
   height: 120rpx;
   border-radius: 50%;
-  margin-left: 0%;
-  margin-top: 0.5%;
+  margin-top: 10rpx;
   position: absolute;
 }
 
@@ -56,17 +63,23 @@
 }
 
 .userinfo-text {
-  margin-left: 13%;
+  width: 100%;
   color: rgb(107, 98, 98);
   font-size: 35rpx;
   font-weight: 400;
-  width: 100%;
 }
 
 .nav-but {
-  margin-bottom: 15px;
+  display: block;
+  float: right;
+  margin-bottom: 15rpx;
   width: 80rpx;
   height: 90rpx;
+}
+
+.nav-but1 {
+  width: 70rpx;
+  margin-left: 16rpx;
 }
 
 .store {
@@ -157,14 +170,37 @@
   flex-wrap: wrap;
 }
 
+.sign view {
+  display: inline-block;
+}
+
 .goods_line {
   /* position: fixed;
   bottom: 2%; */
   width: 100%;
-  margin-top:20rpx;
+  margin-top: 20rpx;
 }
 
 .slide-image {
   width: 100%;
   height: 166px;
+}
+
+.guLiContent {
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.guLi-left {
+  float: left;
+  width: 64%;
+  padding-top: 20rpx;
+}
+
+.goods_line1 {
+  margin-bottom: -1%;
+  margin-left: 5%;
+  border-top: 1rpx dashed #aaa;
+  width: 90%;
 }

@@ -3,12 +3,39 @@
 .container {
   width: 100%;
   height: 100%;
-  position: fixed;
+  /* position: fixed; */
   display: block;
   overflow: auto;
   background: url("https://mlg.proya.com:8099/image/rank/rank.jpg");
 }
 
+.top-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  line-height: 25px;
+  margin-top: 5%; 
+}
+
+.top-title { 
+  color: #fff;
+  font-size: 30rpx;
+   /* margin: 0 15rpx;  */
+  padding: 0 20rpx; 
+  /* width: 20%; */
+  text-align: center;
+  font-weight: 400; 
+}
+.top-title-molid{
+  margin:0 30rpx;
+}
+.present-vue{
+  background-color: #fff;
+  color: #9c84fd;
+  border-radius: 12.5px;
+}
 .List {
   width: 95%;
   margin-top: 5%;
@@ -51,4 +78,7 @@
   top: -3rpx;
   position: relative;
   margin: 0rpx 20rpx 20rpx 0rpx;
+}
+.guLi{
+  justify-content: flex-start;display:flex;width:13%;color: rgb(248, 170, 117);
 }

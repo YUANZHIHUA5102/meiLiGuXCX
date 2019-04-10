@@ -5,7 +5,6 @@ const formatTime = date => {
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
-
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
@@ -91,5 +90,6 @@ function request(method, url, data) {
 
 module.exports = {
   formatTime: formatTime,
-  ajax: ajax
+  ajax: ajax,
+  https:'https://mlg.proya.com/exchange-0.0.1'
 }

@@ -2,11 +2,13 @@
 <view class="container" style='background-size: 100% 100%;'>
 
   <!--分割线-->
-  <view style='display:flex;flex-direction:column;margin-top:5%;'>
-    <view style='font-weight:300;display:flex;justify-content: center;width:100%;color:#fff;font-size:60rpx;'>谷布斯排行榜</view>
-    <!--  <view style='font-weight:200;display:flex;justify-content: center;width:100%;color:#fff;font-size:20rpx;'>GRAIN VALUE RANKING</view>
-  
-      -->
+  <view class='top-view'>
+  <view class="top-title  {{presentView=='T'?'present-vue':''}}" catchtap='onClickTitle' data-pre='T'>总排行榜</view>
+   <view class="top-title top-title-molid {{presentView=='Y'?'present-vue':''}}" catchtap='onClickTitle' data-pre='Y' >年度排行榜</view>
+   <view class="top-title {{presentView=='M'?'present-vue':''}}" catchtap='onClickTitle' data-pre='M'>本月排行榜</view>
+   
+     <!-- <view style='font-weight:200;display:flex;justify-content: center;width:100%;color:#fff;font-size:20rpx;'>GRAIN VALUE RANKING</view> -->
+
   </view>
   <view class="List">
     <view class="menu">
@@ -16,7 +18,9 @@
           <text style='margin-left:10%'>第{{idx+1}}名</text>
           <text decode="{{true}}" style='margin-left:5%;width:20%'>{{item.userName}}</text>
           <text decode="{{true}}" style='color: rgb(248, 170, 117);margin-left:10%;'>谷粒值：</text>
-          <text style='justify-content: flex-start;display:flex;width:13%;color: rgb(248, 170, 117)'>{{item.point.totalPoint}}</text>
+          <text class='guLi' wx:if="{{presentView=='T'}}">{{item.point.totalPoint}}</text>
+          <text class='guLi' wx:if="{{presentView=='Y'}}">{{item.point.pointYear}}</text>
+          <text class='guLi' wx:if="{{presentView=='M'}}">{{item.point.pointMonth}}</text>
         </view>
       </view>
     </view>

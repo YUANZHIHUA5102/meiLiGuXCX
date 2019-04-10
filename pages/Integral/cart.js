@@ -218,10 +218,12 @@ Page({
   },
   //直接兑换方法
   Topay: function() {
+    // console.log('立即兑换');
     var that = this;
-    if (that.data.count == 0) {
-      return;
-    }
+    // if (that.data.count == 0) {
+    //   return;
+    // }
+    
     //比较用户积分是否足够
     var point = wx.getStorageSync("Point")
     if (point.currentPoint < that.data.count) {

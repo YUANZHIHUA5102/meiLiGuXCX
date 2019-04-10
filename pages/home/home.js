@@ -92,7 +92,7 @@ Page({
   },
   ChangToList: function() {
     wx.navigateTo({
-      url: '../Integral/integral_rank'
+      url: '../Integral/integral_rank?type=T'
     })
   },
   ChangTo: function() {

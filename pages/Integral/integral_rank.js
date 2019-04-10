@@ -1,7 +1,8 @@
 // pages/map.js
 const app = getApp()
 import {
-  ajax
+  ajax,
+  https
 } from "../../utils/util.js"
 Page({
 
@@ -9,44 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    rankList: [
-      // {
-      //   url: 'http://www.shundecity.com/uploads/allimg/c121204/13545V25ZP-51363.jpg',
-      //   text: '第一名',
-      //   UserName: '明',
-      //   CurrentPoint: 5100
-      // },
-      // {
-      //   url: 'http://px.thea.cn/Public/Upload/1646772/Intro/1444203830.jpg',
-      //   text: '第二名',
-      //   UserName: '李四',
-      //   CurrentPoint: 40
-      // },
-      // {
-      //   url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542021828923&di=7dfdd2c7c5a1605ff2c1dc164b72d72b&imgtype=0&src=http%3A%2F%2Fwww.cqxdfpr.com%2Fuploads%2F180809%2F180809%2F28-1PP915521B21.png',
-      //   text: '第三名',
-      //   UserName: '张三峰',
-      //   CurrentPoint: 30
-      // },
-      // {
-      //   url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542021828923&di=7dfdd2c7c5a1605ff2c1dc164b72d72b&imgtype=0&src=http%3A%2F%2Fwww.cqxdfpr.com%2Fuploads%2F180809%2F180809%2F28-1PP915521B21.png',
-      //   text: '第四名',
-      //   UserName: '王五奇迹',
-      //   CurrentPoint: 20
-      // },
-      // {
-      //   url: 'http://px.thea.cn/Public/Upload/1646772/Intro/1444203830.jpg',
-      //   text: '第六名',
-      //   UserName: '李七',
-      //   CurrentPoint: 10
-      // },
-      // {
-      //   url: 'http://px.thea.cn/Public/Upload/1646772/Intro/1444203830.jpg',
-      //   text: '第七名',
-      //   UserName: '李八',
-      //   CurrentPoint: 5
-      // }
-    ],
+    rankList: [],
+    presentView: 'T'
   },
 
   /**
@@ -54,19 +19,64 @@ Page({
    */
   onLoad: function(options) {
     var that = this
-    ajax.get("/GetTenUsers").then(res => {
-      console.log(res)
-      that.setData({
-        rankList: res
-      })
-    }).catch(err => {
-      this.toast.showToast({
-        toastType: "error",
-        message: err
-      })
+
+    // ajax.get("/GetTenUsers").then(res => {
+    //   // console.log(res)
+    //   that.setData({
+    //     rankList: res
+    //   })
+    // }).catch(err => {
+    //   this.toast.showToast({
+    //     toastType: "error",
+    //     message: err
+    //   })
+    // })
+    wx.request({
+      //url: "http://10.20.10.123:8080/exchange-0.0.1/GetTenUsers?type=T",
+      url: https+"/GetTenUsers?type=T" ,
+      method: 'get',
+      success: function (res) {
+        console.log('res', res.data);
+        that.setData({
+          rankList: res.data
+        })
+      }
     })
   },
+  // 点击排行tab执行函数2019-3-5-yzh
+  onClickTitle: function(e) {
+    var that = this;
+    var pre = e.currentTarget.dataset.pre;
+    that.setData({
+      presentView: pre
+    })
 
+    wx.request({
+      //url: "https://mlg.proya.com/exchange-0.0.1/GetTenUsers?type=" + pre,
+      url: https+"/GetTenUsers?type=" + pre,
+      method: 'get',
+      success: function(res) {
+        console.log('res', res.data);
+        that.setData({
+          rankList: res.data
+        })
+      }
+    })
+
+
+
+    // ajax.post("/GetTenUsers").then(res => {
+    //    console.log(res)
+    //   that.setData({
+    //     rankList: res
+    //   })
+    // }).catch(err => {
+    //   this.toast.showToast({
+    //     toastType: "error",
+    //     message: err
+    //   })
+    // })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

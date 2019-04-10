@@ -5,10 +5,6 @@ import {
   formatTime
 } from "../../utils/util.js"
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     isIphoneX: app.globalData.isIphoneX,
     point: [],
@@ -60,7 +56,6 @@ Page({
       url: '../order/goods_detail?prizeuid=' + prizeuid,
     })
   },
-
   /* 点击减号 */
   bindMinus: function() {
     var num = this.data.num;
@@ -93,7 +88,6 @@ Page({
       minusStatus: minusStatus
     });
   },
-
   //显示对话框
   showModal: function() {
     // 显示遮罩层
@@ -152,7 +146,6 @@ Page({
       content: '确认兑换' + that.data.name + ' ' + that.data.num + '个',
       success(res) {
         if (res.confirm) {
-
           var prizeuid = that.data.prizeuid;
           var name = that.data.name;
           var tag = that.data.tag;
@@ -179,15 +172,12 @@ Page({
             wx.navigateTo({
               url: '../order/order',
             })
-          }).catch(err => {
-
-          })
+          }).catch(err => {})
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
-
   },
   //加入购物车方法
   addCart: function(e) {
@@ -200,19 +190,15 @@ Page({
     var remaincount = that.data.remaincount;
     var num = that.data.num;
     var imgurl = that.data.imgurl;
-
-
     wx.showToast({
       title: '已加入购物车',
       icon: 'success',
       duration: 1200
     })
-
     var hasgoods = false;
     //判断购物车内是否已经有该物品，若无则加入购物车，有则增加数量
     for (var i = 0; i < that.data.list.length; i++) {
       if (that.data.list[i].prizeuid == prizeuid) {
-
         that.data.list[i].num = that.data.list[i].num * 1 + num * 1;
         if (that.data.list[i].num > that.data.list[i].remaincount) {
           that.data.list[i].num = that.data.list[i].remaincount
@@ -269,24 +255,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
+  onShow: function() {},
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -305,19 +274,5 @@ Page({
       })
     })
     wx.stopPullDownRefresh();
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
   }
 })

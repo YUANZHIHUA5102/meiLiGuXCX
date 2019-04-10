@@ -20,6 +20,8 @@
     </view>
   </view>
   <view class="loginBtnView">
+   <text class="Btn" bindtap='onSuggestion'>留言查看</text>
+    <view style='margin-left:5%;width:90%;border-bottom: 1rpx dashed #aaa;'></view>
     <text class="Btn" bindtap='bindViewTap'>个人中心</text>
     <view style='margin-left:5%;width:90%;border-bottom: 1rpx dashed #aaa;'></view>
     <text class="Btn" bindtap="exit">退出登录</text>

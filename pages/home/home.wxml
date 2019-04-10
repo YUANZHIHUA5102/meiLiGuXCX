@@ -1,56 +1,46 @@
 <!--index.wxml-->
 <view class="container">
   <!--顶部轮切图-->
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:30%;'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgShow}}">
       <swiper-item>
         <navigator url="../activity/activity_detail?activityuid={{item.activityuid}}" hover-class="navigator-hover">
-          <image src="{{item.bannerimg}}" class="slide-image" height="20" mode='scaleToFill'/>
+          <image src="{{item.bannerimg}}" class="slide-image" height="20" mode='scaleToFill' />
         </navigator>
       </swiper-item>
     </block>
   </swiper>
   <!--头像姓名工号 -->
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='  float: left;'> 获取头像昵称 </button>
-    <block style='float: left;'>
-
-      <view class="user_name">
-        <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"> </image>
-        <image class="userinfo-avatar-shadow" src="../image/6.png"></image>
-        <text class="userinfo-nickname">{{user.userName}}</text>
-        <view class="sign">
-          <view style='display: inline-block;' wx:for='{{Au_num}}'>
-            <image class="img-gu" src="../image/Au.png"></image>
-          </view>
-          <view style='display: inline-block;' wx:for='{{Ag_num}}'>
-            <image class="img-gu" src="../image/Ag.png"></image>
-          </view>
-          <view style='display: inline-block;' wx:for='{{Cu_num}}'>
-            <image class="img-gu" src="../image/Cu.png"></image>
-          </view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <view class="user_name">
+      <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"> </image>
+      <image class="userinfo-avatar-shadow" src="../image/6.png"></image>
+      <text class="userinfo-nickname">{{user.userName}}</text>
+      <view class="sign">
+        <view wx:for='{{Au_num}}'>
+          <image class="img-gu" src="../image/Au.png"></image>
+        </view>
+        <view wx:for='{{Ag_num}}'>
+          <image class="img-gu" src="../image/Ag.png"></image>
+        </view>
+        <view wx:for='{{Cu_num}}'>
+          <image class="img-gu" src="../image/Cu.png"></image>
         </view>
       </view>
-    </block>
-
-    <view style='width:100%;display:flex;flex-direction: row;'>
-
-      <view style='width:70%;display:flex;flex-direction: column;'>
-        <view style='margin-top:2%;'></view>
-        <view style='display: flex;flex-direction: row;'>
-          <text class="userinfo-text">总谷粒值：{{point.totalPoint}}</text>
-        </view>
-        <text class="userinfo-text" style='width:100%'>可兑换谷粒值：{{point.currentPoint}}</text>
+    </view>
+    <view class='guLiContent'>
+      <view class='guLi-left'>
+        <view class="userinfo-text">总谷粒值：{{point.totalPoint}}</view>
+        <view class="userinfo-text">可兑换谷粒值：{{point.currentPoint}}</view>
       </view>
-      <image class="nav-but" style='width:90rpx;' src='../image/rank.png' bindtap='ChangToList'></image>
-      <view style='margin-left:2%;'></view>
-      <image class="nav-but" style='width:75rpx;' src='../image/access.png' bindtap='ChangToHelp'></image>
+      <image class="nav-but  nav-but1"  src='../image/access.png' bindtap='ChangToHelp'></image>
+        <image class="nav-but nav-but2"  src='../image/rank.png' bindtap='ChangToList'></image>
     </view>
   </view>
-
   <view class='goods_line'>
     <!--虚线-->
-    <view style='margin-bottom:-1%;margin-left:5%;border-top:1rpx dashed #aaa;width:90%;'></view>
+    <view class='goods_line1' ></view>
     <!--美丽谷仓-->
     <view class="store">
       <view style='display: flex;flex-direction: column;'>
@@ -100,13 +90,9 @@
           </view>
         </view>
       </view>
-
-
       <image class="arrow" bindtap='RightArrow' src='../image/right.png'></image>
     </view>
-
   </view>
-
   <toast id="toast" />
   <update id="update" />
   <welcome id="welcome" />

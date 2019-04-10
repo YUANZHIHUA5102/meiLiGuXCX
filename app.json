@@ -10,6 +10,9 @@
     
     "pages/Integral/integral_exchange",
     "pages/user_info/userinfo",
+    "pages/user_info/messageView/messageView",
+    "pages/user_info/historyMessages/historyMessage",
+    "pages/user_info/suggestions/suggestion",
     "pages/user_info/mine",
     "pages/Sendmsg/sendmsg",
     "pages/logs/logs",
@@ -26,6 +29,7 @@
     "pages/index/index",
     "pages/component/inputpopup/inputpopup",
     "pages/component/toast/toast",
+    "pages/component/rankLists/rankLists",
     "pages/component/first_toast/toast"
   ],
   "window": {

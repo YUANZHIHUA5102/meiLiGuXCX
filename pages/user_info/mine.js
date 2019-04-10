@@ -56,7 +56,12 @@ Page({
       hasUserInfo: true
     })
   },
-
+  // 意见功能跳转
+  onSuggestion:function(){
+   wx.navigateTo({
+     url:'../user_info/messageView/messageView'
+   })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -66,7 +71,6 @@ Page({
       user: user,
     })
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
